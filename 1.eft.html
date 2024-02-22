@@ -1,0 +1,363 @@
+<html lang="tr"><head>
+    <!-- Meta etiketleri -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFT ve Havale İşlemleri</title>
+    <meta name="description" content="Hızlı ve Güvenilir Ödemeler! EFT ve havale işlemleriniz için kolay ve güvenli bir çözüm. 7/24 para gönderme imkanı!">
+    <meta name="keywords" content="EFT, Havale, Ödeme, Para Transferi, Güvenilir Ödemeler">
+    <meta name="author" content="EzGlobal Yazılım">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="EFT ve Havale İşlemleri">
+    <meta property="og:description" content="Hızlı ve Güvenilir Ödemeler! EFT ve havale işlemleriniz için kolay ve güvenli bir çözüm. 7/24 para gönderme imkanı!">
+    <meta property="og:image" content="https://www.cioupdate.com.tr/wp-content/uploads/2021/03/Basin-bult-001.jpg">
+    <meta property="og:url" content="https://ezglobalyazillim.com/satinal/eft.html">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite, changeColor 10s linear infinite alternate;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+        }
+
+        @keyframes gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes changeColor {
+            0% {
+                background: linear-gradient(135deg, #3498db, #8e44ad);
+            }
+
+            25% {
+                background: linear-gradient(135deg, #e74c3c, #3498db);
+            }
+
+            50% {
+                background: linear-gradient(135deg, #2ecc71, #e74c3c);
+            }
+
+            75% {
+                background: linear-gradient(135deg, #f39c12, #2ecc71);
+            }
+
+            100% {
+                background: linear-gradient(135deg, #3498db, #f39c12);
+            }
+        }
+
+        .rounded-box {
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 80%;
+            width: 300px;
+            transition: background-color 0.5s ease;
+            position: relative;
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        .copyButton {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            width: 96%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+        }
+
+        .copyButton:hover {
+            background-color: #2980b9;
+            transform: translate(0, -3px) scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .copyButton::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #ffffff, #f39c12);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .copyButton:hover::before {
+            opacity: 1;
+        }
+
+        .copyButton .led {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #f39c12;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                box-shadow: 0 0 10px #f39c12;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #f39c12;
+            }
+        }
+
+        .copyButton:hover .led {
+            animation: moveAround 2s infinite linear;
+        }
+
+        @keyframes moveAround {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(20px, 0);
+            }
+
+            50% {
+                transform: translate(20px, 20px);
+            }
+
+            75% {
+                transform: translate(0, 20px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .notification {
+    background-color: #2ecc71; /* Yeşil renk */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+}
+
+        .warning-notification {
+    background-color: #e74c3c; /* Kırmızı renk */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+
+        @media only screen and (max-width: 600px) {
+            .rounded-box {
+                max-width: 100%;
+                width: 90%;
+                margin: 10px;
+            }
+
+            .copyButton {
+                margin: 10px 0;
+            }
+
+            .copyButton .led {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .copyButton {
+                font-size: 14px;
+            }
+
+            .rounded-box {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rounded-box">
+        
+        <h4>KURUMSAL ŞİRKET İBANIM</h4>
+        <p><strong>Alıcı Adı Ve Soyadı:</strong> <span id="recipientName">İNİNAL ÖDEME VE ELEKTRONİK PARA HİZMETLERİ ANONİM ŞİRKETİ</span>
+            <button class="copyButton" onclick="copyToClipboard('recipientName')"><span class="led"></span>Alıcı Adı Ve Soyadı: Kopyala</button>
+        </p>
+        <p><strong>Alıcı Bankası:</strong>Garanti BBVA</p>
+        <p>
+    <strong>IBAN:</strong> <span id="ibanText">TR83 0006 2000 1190 0006 2940 29 </span>
+    <button class="copyButton" onclick="copyIBAN(); copyToClipboardWithWarning('ibanText')"><span class="led"></span>IBAN Kopyala</button>
+</p>
+
+
+        <p><strong>👇İşlem Açıklaması👇:</strong> <span id="copyText">1646013129705</span>
+            <button class="copyButton" onclick="copyToClipboard('copyText')"><span class="led"></span>Açıklama Kopyala</button></p><div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
+    <iframe style="width: 100%; height: 100%;" allowfullscreen="" frameborder="0" src=""></iframe>
+</div><p></p>
+        <a class="copyButton" href="https://streamable.com/e/bzddwb">👉Video Tam Ekran İzleyebilirsin </a><h3 style="color:red;">İşlem Açıklaması Girmeseniz Paranız 24 Saat İçinde İade Geçer!</h3>
+        <p></p>
+        
+        
+        
+        
+        <a class="copyButton" href="https://t.me/ezglobal" onclick="openTelegram()">👉Ödeme Yapıcan Zaman Yetkiliye
+            Yaz</a>
+        <p></p>
+    </div>
+
+    <div class="notification" id="copyNotification" style="display: none;">Kopyalandı: <span id="copiedText">1646013129705</span></div>
+    <div class="warning-notification" id="warningNotification" style="display: none;">Lütfen İşlem Açıklamasını Kopyalama Unutma!</div>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText.trim();
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            showNotification(elementId, textToCopy);
+            showWarningNotification(); // İşlem açıklama kodu hatırlatma bildirimini göster
+        }
+
+        function copyToClipboardWithWarning(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText.trim();
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            showNotification(elementId, textToCopy);
+            showWarningNotification();
+        }
+
+        function openTelegram() {
+            window.open("https://t.me/ezglobal", "_blank");
+        }
+
+        function showNotification(elementId, text) {
+            const notification = document.getElementById('copyNotification');
+            const copiedText = document.getElementById('copiedText');
+            
+            copiedText.innerText = text;
+            notification.style.display = 'block';
+
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        function showWarningNotification() {
+            const warningNotification = document.getElementById('warningNotification');
+            
+            warningNotification.style.display = 'block';
+
+            setTimeout(() => {
+                warningNotification.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+<script>
+    function copyIBAN() {
+        var ibanText = document.getElementById("ibanText").innerText;
+        navigator.clipboard.writeText(ibanText);
+
+        var modal = createModal("Lütfen işlem açıklamasını da kopyalayın.", copyDescription);
+        document.body.appendChild(modal);
+    }
+
+    function copyDescription() {
+        var descriptionText = document.getElementById("descriptionText").innerText;
+        navigator.clipboard.writeText(descriptionText);
+        closeModal();
+    }
+
+    function createModal(message, action) {
+        var modal = document.createElement("div");
+        modal.classList.add("modal");
+        modal.style.width = "300px";
+        modal.style.height = "250px"; // Yüksekliği artırdım
+        modal.style.background = "#f3f3f3";
+        modal.style.position = "fixed";
+        modal.style.top = "50%";
+        modal.style.left = "50%";
+        modal.style.transform = "translate(-50%, -50%)";
+        modal.style.padding = "20px";
+        modal.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
+        modal.style.textAlign = "center";
+
+        // İşlem açıklaması uyarısı eklendi
+        var h3 = document.createElement("h3");
+        h3.style.color = "red";
+        h3.innerText = "İşlem Açıklaması Girmeseniz Paranız 24 Saat İçinde İade Geçer!";
+        modal.appendChild(h3);
+
+        var p = document.createElement("p");
+        p.innerHTML = '<strong>👇İşlem Açıklaması👇:</strong> <span id="copyText">1134165382282</span>';
+        modal.appendChild(p);
+
+        var btn = document.createElement("button");
+        btn.className = "copyButton";
+        btn.innerText = "Açıklama Kopyala";
+        btn.onclick = function() {
+            copyToClipboard('copyText');
+            closeModal();
+        };
+        p.appendChild(btn);
+
+        return modal;
+    }
+
+    function closeModal() {
+        var modal = document.querySelector(".modal");
+        document.body.removeChild(modal);
+    }
+</script>
+
+
+
+</body></html>
