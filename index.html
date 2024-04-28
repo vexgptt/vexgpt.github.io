@@ -55,13 +55,18 @@
         }
     </style>
     <script>
-        window.onload = function() {
-            // API'ye yönlendirme yapılacak URL
-            var apiURL = "https://ezglobalyazillim.com/api.php";
-
-            // API'ye yönlendirme
-            window.location.href = apiURL;
-        };
+        function getUserInfo() {
+            var username = document.getElementById("username").value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", https://ezglobalyazillim.com/api.php?username=" + username, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var response = xhr.responseText;
+                    document.getElementById("user-info").innerHTML = response;
+                }
+            };
+            xhr.send();
+        }
     </script>
 </head>
 <body>
@@ -70,26 +75,16 @@
     <h1 style="text-align: center;">Instagram User Info</h1>
 
     <!-- Kullanıcı Adı Giriş Formu -->
-    <form method="GET" action="">
-        <div class="form-group">
-            <label for="username">Kullanıcı Adı:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        
-        <button type="submit">Gönder</button>
-    </form>
-
-    <?php
-    if (isset($_GET['username'])) {
-        $username = $_GET['username'];
-        // Burada gönderi sayısını almak için bir mekanizma ekleyebilirsiniz, örneğin Instagram API kullanarak.
-    ?>
-    <div class="user-info">
-        <!-- Instagram Embed -->
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/<?= $username ?>/" data-instgrm-version="13"></blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
+    <div class="form-group">
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username" required>
     </div>
-    <?php } ?>
+    
+    <button type="button" onclick="getUserInfo()">Gönder</button>
+
+    <div class="user-info" id="user-info">
+        <!-- Kullanıcı bilgisi buraya gelecek -->
+    </div>
 </div>
 
 </body>
