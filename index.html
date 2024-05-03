@@ -1,31 +1,26 @@
-<!DOCTYPE html>
-<html lang="tr">
-
-<head>
+<html lang="tr"><head>
     <!-- Meta etiketleri -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EFT ve Havale İşlemleri</title>
-    <meta name="description"
-        content="Hızlı ve Güvenilir Ödemeler! EFT ve havale işlemleriniz için kolay ve güvenli bir çözüm. 7/24 para gönderme imkanı!">
+    <meta name="description" content="Hızlı ve Güvenilir Ödemeler! EFT ve havale işlemleriniz için kolay ve güvenli bir çözüm. 7/24 para gönderme imkanı!">
     <meta name="keywords" content="EFT, Havale, Ödeme, Para Transferi, Güvenilir Ödemeler">
     <meta name="author" content="EzGlobal Yazılım">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="EFT ve Havale İşlemleri">
-    <meta property="og:description"
-        content="Hızlı ve Güvenilir Ödemeler! EFT ve havale işlemleriniz için kolay ve güvenli bir çözüm. 7/24 para gönderme imkanı!">
-    <meta property="og:image"
-        content="https://www.cioupdate.com.tr/wp-content/uploads/2021/03/Basin-bult-001.jpg">
+    <meta property="og:description" content="Hızlı ve Güvenilir Ödemeler! EFT ve havale işlemleriniz için kolay ve güvenli bir çözüm. 7/24 para gönderme imkanı!">
+    <meta property="og:image" content="https://www.cioupdate.com.tr/wp-content/uploads/2021/03/Basin-bult-001.jpg">
     <meta property="og:url" content="https://ezglobalyazillim.com/satinal/eft.html">
     <meta property="og:type" content="website">
 
 
     <style>
+    
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #090e02;
+            background-color: #090e02  ;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -118,39 +113,131 @@
                 padding: 10px;
             }
         }
+		 body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff; /* Tüm metinlerin rengi */
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 600px;
+        width: 90%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .rounded-box {
+        border: 2px solid #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    .copyButton {
+        display: block;
+        margin: 10px auto;
+        padding: 8px;
+        background-color: transparent;
+        color: #fff; /* Buton metin rengi */
+        border: 2px solid #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+    }
+
+    .copyButton:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translate(0, -3px) scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .notification {
+        background-color: rgba(0, 255, 0, 0.7);
+        color: white;
+        padding: 15px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        display: none;
+    }
+
+    .warning-notification {
+        background-color: rgba(255, 0, 0, 0.7);
+        color: white;
+        padding: 15px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container {
+            width: 100%;
+        }
+
+        .copyButton {
+            margin: 10px 0;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .copyButton {
+            font-size: 14px;
+        }
+
+        .rounded-box {
+            padding: 10px;
+        }
+    }
     </style>
 </head>
 
 <body>
-    <div id="passwordPage" class="container" style="background-color: #090e02;">
-        <h2 style="color: #fff;">Sayfa Görüntülemek için Sizlere Verilen Şifreyi Lütfen Girin:</h2>
-        <input type="password" id="passwordInput"
-            style="padding: 10px; margin: 10px 0; border-radius: 5px; border: none;">
-        <button onclick="checkPassword()"
-            style="padding: 10px 20px; background-color: #8ddc1f; color: #000; border: none; border-radius: 5px; cursor: pointer;">Şifreyi
-            Gir</button>
+    <div id="passwordPage" class="container" style="background-color: #090e02 ;">
+    <h2 style="color: #fff;">Sayfa Görüntülemek icin Sizlere Verilen Sifreyi Lütfen Girin:</h2>
+    <input type="password" id="passwordInput" style="padding: 10px; margin: 10px 0; border-radius: 5px; border: none;">
+    <button onclick="checkPassword()" style="padding: 10px 20px; background-color: #8ddc1f ; color: #000; border: none; border-radius: 5px; cursor: pointer;">Sifreyi Gir</button>
 
-    </div>
+</div>
 
 
     <div id="contentPage" class="container" style="display: none;">
         <!-- Ödeme bilgileri sayfası buraya gelecek -->
         <div class="rounded-box">
-            <p><strong>Şirket İbanı</strong> <span id="recipientName">TR360021300000010367100001</span>
-                <button class="copyButton" onclick="copyToClipboard('recipientName')"><span class="led"></span>Şirket
-                    İbanı KOPYALA</button>
+            <p><strong>ŞİRKET İBANI </strong> <span id="recipientName">TR360021300000010367100001</span>
+                <button class="copyButton" onclick="copyToClipboard('recipientName')"><span class="led"></span>ŞİRKET İBANI KOPYALA</button>
             </p>
 
-            <p><strong>Şirket Alıcı Adı Kısmı:</strong> <span id="ibanText">NUH</span>
-                <button class="copyButton" onclick="copyIBAN(); copyToClipboardWithWarning('ibanText')"><span
-                        class="led"></span>Şirket Alıcı Adı Kısmı KOPYALA</button>
+            <p><strong>ŞİRKET ALICI ADI KISMI 👉:</strong> <span id="ibanText">NUH</span>
+                <button class="copyButton" onclick="copyIBAN(); copyToClipboardWithWarning('ibanText')"><span class="led"></span>ŞİRKET ALICI ADI KISMI KOPYALA</button>
             </p>
 
-            <p><strong>İşlem Açıklaması:</strong> <span id="copyText">Arkadaşıma Destek Yardım Ödemesidir.</span>
-                <button class="copyButton" onclick="copyToClipboard('copyText')"><span class="led"></span>İşlem Açıklaması
-                    KOPYALA</button><span
-                    style="color:red; font-size:large; background-color:lightgrey;">Üstte Belirtilen İşlem Açıklaması
-                    Girilmezse 24 Saat İçinde Paranız İade Geçer!</span></p>
+            <p><strong>İŞLEM AÇIKLAMASI 👉:</strong> <span id="copyText">Arkadaşıma Destek Yardım Ödemesidir.</span>
+                <button class="copyButton" onclick="copyToClipboard('copyText')"><span class="led"></span>İŞLEM AÇIKLAMASI KOPYALA</button><span style="color:red; font-size:large; background-color:lightgrey;">Üste Belirtilen İşlem Açıklaması Girilmezse 24 Saat İçinde Paranız İade Geçer! </span></p>
             <div style="display: inline-block;">
                 <img src="https://i.hizliresim.com/zM87O7.gif" style="width: 100%; height: auto;">
                 <br>
@@ -158,9 +245,7 @@
                 <strong class="neon-text">Anlaşmalı Bankalarımız </strong>
                 <div style="max-width: 100%; overflow: hidden;">
                     <video autoplay="" controls="" style="width: 50%; height: 400;" allowfullscreen="" frameborder="0">
-                        <source
-                            src="https://cdn-cf-east.streamable.com/video/mp4/axpvli.mp4?Expires=1713520791855&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=H7RpTyYAn8LwIPVzfpK8YdNA6DWVQqmAFbC7Iqyx3clm8LruA9qCiFnhIWpXBZknFIGgTUAm~50G~zS6c1uVjiputB8n3v9D39IdignsWCXRkk8W1Bmw9Qx9eBGHm4wA5OvSb23QHsht~ERpF3ENXQnA60epdybEVHBA23~ChkHQySj-rJ-raO-Crr3nTA4A5ZlHyba0Jdg0dfG3JpBIYhIfUcqZmzorXD14BaAdUEV4Fn1EfGVW8Y7IQfdExMTTLv3xfDSD0YNAUd9m0p2rY4Xkjpr3KO3-ZdYBWKhhMZ2l0GuZWZkNgnWukpRtd-6ft1ovqxrrYKf5r2kKPwZ3uw__"
-                            type="video/mp4">
+                        <source src="https://cdn-cf-east.streamable.com/video/mp4/axpvli.mp4?Expires=1713520791855&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=H7RpTyYAn8LwIPVzfpK8YdNA6DWVQqmAFbC7Iqyx3clm8LruA9qCiFnhIWpXBZknFIGgTUAm~50G~zS6c1uVjiputB8n3v9D39IdignsWCXRkk8W1Bmw9Qx9eBGHm4wA5OvSb23QHsht~ERpF3ENXQnA60epdybEVHBA23~ChkHQySj-rJ-raO-Crr3nTA4A5ZlHyba0Jdg0dfG3JpBIYhIfUcqZmzorXD14BaAdUEV4Fn1EfGVW8Y7IQfdExMTTLv3xfDSD0YNAUd9m0p2rY4Xkjpr3KO3-ZdYBWKhhMZ2l0GuZWZkNgnWukpRtd-6ft1ovqxrrYKf5r2kKPwZ3uw__" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -186,10 +271,8 @@
             </div>
         </div>
 
-        <div class="notification" id="copyNotification" style="display: none;">Kopyalandı: <span
-                id="copiedText">NUH</span></div>
-        <div class="warning-notification" id="warningNotification" style="display: none;">Lütfen İşlem Açıklamasını
-            Kopyalama Unutmayın!</div>
+        <div class="notification" id="copyNotification" style="display: none;">Kopyalandi: <span id="copiedText">NUH</span></div>
+        <div class="warning-notification" id="warningNotification" style="display: none;">Lütfen İşlem Açıklamasını Kopyalama Unutma!</div>
     </div>
 
     <script>
@@ -199,13 +282,11 @@
                 document.getElementById("passwordPage").style.display = "none";
                 document.getElementById("contentPage").style.display = "block";
             } else {
-                alert("Yanlış şifre! Lütfen tekrar deneyin.");
+                alert("Yanlıs sifre! Lütfen tekrar deneyin.");
             }
         }
     </script>
-    <script type="text/javascript" async=""
-        src="https://www.statcounter.com/counter/recorder.js"></script>
-    <script>
+ <script type="text/javascript" async="" src="https://www.statcounter.com/counter/recorder.js"></script><script>
         function copyToClipboard(elementId) {
             const textToCopy = document.getElementById(elementId).innerText.trim();
             const textarea = document.createElement('textarea');
@@ -259,62 +340,62 @@
         }
     </script>
     <script>
-        function copyIBAN() {
-            var ibanText = document.getElementById("ibanText").innerText;
-            navigator.clipboard.writeText(ibanText);
+    function copyIBAN() {
+        var ibanText = document.getElementById("ibanText").innerText;
+        navigator.clipboard.writeText(ibanText);
 
-            var modal = createModal("Lütfen işlem açıklamasını da kopyalayın.", copyDescription);
-            document.body.appendChild(modal);
-        }
+        var modal = createModal("Lütfen işlem açıklamasını da kopyalayın.", copyDescription);
+        document.body.appendChild(modal);
+    }
 
-        function copyDescription() {
-            var descriptionText = document.getElementById("copyText").innerText;
-            navigator.clipboard.writeText(descriptionText);
+    function copyDescription() {
+        var descriptionText = document.getElementById("descriptionText").innerText;
+        navigator.clipboard.writeText(descriptionText);
+        closeModal();
+    }
+
+    function createModal(message, action) {
+        var modal = document.createElement("div");
+        modal.classList.add("modal");
+        modal.style.width = "300px";
+        modal.style.height = "250px"; // Yüksekliği artırdım
+        modal.style.background = "#000"; /* Arka plan rengi siyah */
+        modal.style.color = "#fff"; /* Metin rengi beyaz */
+        modal.style.position = "fixed";
+        modal.style.top = "50%";
+        modal.style.left = "50%";
+        modal.style.transform = "translate(-50%, -50%)";
+        modal.style.padding = "20px";
+        modal.style.boxShadow = "0px 0px 10px rgba(255,255,255,0.1)"; /* Beyaz gölge */
+        modal.style.textAlign = "center";
+
+        // İşlem açıklaması uyarısı eklendi
+        var h3 = document.createElement("h3");
+        h3.style.color = "#f00"; /* Başlık rengi kırmızı */
+        h3.innerText = "İşlem Açıklaması Girilmezse Paranız 24 Saat İçinde İade Geçer!";
+        modal.appendChild(h3);
+
+        var p = document.createElement("p");
+        p.innerHTML = '<strong>İşlem Açıklaması:</strong> <span id="copyText">Arkadaşıma Destek Yardım Ödemesidir</span>';
+        modal.appendChild(p);
+
+        var btn = document.createElement("button");
+        btn.className = "copyButton";
+        btn.innerText = "Açıklama Kopyala";
+        btn.onclick = function() {
+            copyToClipboard('copyText');
             closeModal();
-        }
+        };
+        p.appendChild(btn);
 
-        function createModal(message, action) {
-            var modal = document.createElement("div");
-            modal.classList.add("modal");
-            modal.style.width = "300px";
-            modal.style.height = "250px"; // Yüksekliği artırdım
-            modal.style.background = "#f3f3f3";
-            modal.style.position = "fixed";
-            modal.style.top = "50%";
-            modal.style.left = "50%";
-            modal.style.transform = "translate(-50%, -50%)";
-            modal.style.padding = "20px";
-            modal.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.1)";
-            modal.style.textAlign = "center";
+        return modal;
+    }
 
-            // İşlem açıklaması uyarısı eklendi
-            var h3 = document.createElement("h3");
-            h3.style.color = "red";
-            h3.innerText = "İşlem Açıklaması Girilmezse Paranız 24 Saat İçinde İade Geçer!";
-            modal.appendChild(h3);
+    function closeModal() {
+        var modal = document.querySelector(".modal");
+        document.body.removeChild(modal);
+    }
+</script>
 
-            var p = document.createElement("p");
-            p.innerHTML = '<strong>İşlem Açıklaması:</strong> <span id="copyText">Arkadaşıma Destek Yardım Ödemesidir</span>';
-            modal.appendChild(p);
 
-            var btn = document.createElement("button");
-            btn.className = "copyButton";
-            btn.innerText = "Açıklama Kopyala";
-            btn.onclick = function () {
-                copyToClipboard('copyText');
-                closeModal();
-            };
-            p.appendChild(btn);
-
-            return modal;
-        }
-
-        function closeModal() {
-            var modal = document.querySelector(".modal");
-            document.body.removeChild(modal);
-        }
-    </script>
-
-</body>
-
-</html>
+</body></html>
