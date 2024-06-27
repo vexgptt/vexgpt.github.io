@@ -402,6 +402,12 @@
         location.reload();
     }, 30000); // 30000 milisaniye (30 saniye)
 </script>
+<script>
+    // Sağ tıklamayı devre dışı bırakır
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
 
 <!-- Default Statcounter code for ezglobal https://ezglobalyazillim.com/ -->
 <script type="text/javascript">
