@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol Analiz Merkezi Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="main-header">
+            <h1><i class="fa-solid fa-futbol"></i> Futbol Analiz Merkezi Pro</h1>
+            <div class="controls-section">
+                <label for="leagueSelect"><i class="fa-solid fa-trophy"></i> Lig Seçin:</label>
+                <select id="leagueSelect">
+                    <option value="">-- Lig Seçiniz --</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <nav class="navigation-section">
+                    <h2><i class="fa-solid fa-bars"></i> Menü</h2>
+                    <button class="nav-button active" data-view="standings" disabled><i class="fa-solid fa-table-list"></i> Puan Durumu</button>
+                    <button class="nav-button" data-view="upcoming" disabled><i class="fa-solid fa-calendar-days"></i> Gelecek Maçlar</button>
+                    <button class="nav-button" data-view="recent" disabled><i class="fa-solid fa-clock-rotate-left"></i> Son Maçlar</button>
+                    <button class="nav-button" data-view="topscorers" disabled><i class="fa-solid fa-star"></i> Gol Krallığı</button>
+                    <button class="nav-button" data-view="highlights" disabled><i class="fa-solid fa-bookmark"></i> Öne Çıkanlar</button>
+                    <button class="nav-button" data-view="coupon" disabled><i class="fa-solid fa-receipt"></i> Kupon</button>
+                </nav>
+                 <div class="sidebar-info">
+                    <p>API Durumu: <span id="apiStatus" style="color: #6c757d;">Bilinmiyor</span></p>
+                    <p class="warning-box" style="font-size: 0.8em; padding: 0.5em;">
+                        <strong>Limit Uyarısı:</strong> Analizler API limitlerini kullanır. Sık kullanım limitleri tüketebilir.
+                    </p>
+                </div>
+            </aside>
+
+            <main id="content" class="main-content">
+                <div id="standings" class="data-view active">
+                    <h2><i class="fa-solid fa-table-list"></i> Puan Durumu</h2>
+                    <div class="loading">Yükleniyor...</div>
+                    <div class="error"></div>
+                    <div class="table-responsive">
+                        <table id="standingsTable">
+                            <thead>
+                                <tr><th>#</th><th></th><th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th>AG</th><th>YG</th><th>Av.</th><th>Puan</th><th class="form-col">Form</th></tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="topscorers" class="data-view">
+                    <h2><i class="fa-solid fa-star"></i> Gol Krallığı</h2>
+                    <div class="loading">Yükleniyor...</div>
+                    <div class="error"></div>
+                     <div class="table-responsive">
+                        <table id="topscorersTable">
+                             <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Oyuncu</th>
+                                    <th>Takım</th>
+                                    <th>Gol</th>
+                                    <th>Penaltı</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="recent" class="data-view">
+                    <h2><i class="fa-solid fa-clock-rotate-left"></i> Son Maçlar (Son 7 Gün)</h2>
+                    <div class="loading">Yükleniyor...</div>
+                    <div class="error"></div>
+                    <ul id="recentMatchesList" class="match-list recent-matches"></ul>
+                 </div>
+
+                 <div id="upcoming" class="data-view">
+                    <h2><i class="fa-solid fa-calendar-days"></i> Gelecek Maçlar (Sonraki 7 Gün)</h2>
+                    <button id="analyzeUpcomingButton" class="action-button analyze-all" disabled>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Tümünü Analiz Et & Kupona Ekle
+                    </button>
+                    <div id="autoAnalysisStatusUpcoming" class="auto-analysis-status"></div>
+                    <div class="loading">Yükleniyor...</div>
+                    <div class="error"></div>
+                    <ul id="upcomingMatchesList" class="match-list upcoming-matches"></ul>
+                 </div>
+
+                <div id="highlights" class="data-view">
+                     <h2><i class="fa-solid fa-bookmark"></i> Öne Çıkan Maçlar</h2>
+                     <div class="loading" style="display: none;">Yükleniyor...</div>
+                     <div class="error"></div>
+                     <ul id="highlightsList" class="match-list highlight-list"></ul>
+                     <button id="clearHighlightsButton" class="action-button clear-list" style="display: none;">
+                         <i class="fa-solid fa-trash"></i> Listeyi Temizle
+                    </button>
+                 </div>
+
+                 <div id="coupon" class="data-view">
+                       <h2><i class="fa-solid fa-receipt"></i> Kuponum</h2>
+                        <p class="coupon-info">Otomatik analizle eklenen güçlü tahminler veya manuel eklediğiniz maçlar burada listelenir.</p>
+                       <div class="loading" style="display: none;">Yükleniyor...</div>
+                       <div class="error"></div>
+                       <ul id="couponList" class="match-list coupon-list"></ul>
+                       <button id="clearCouponButton" class="action-button clear-list" style="display: none;">
+                           <i class="fa-solid fa-trash"></i> Kuponu Temizle
+                        </button>
+                   </div>
+            </main>
+        </div>
+
+        <div id="analysisModal" class="modal">
+             <div class="modal-content">
+                <span class="modal-close" onclick="closeAnalysisModal()">&times;</span>
+                <h2 id="modalTitle">Maç Analizi</h2>
+                <div class="modal-body">
+                    <div id="modalLoading" class="loading" style="display: none;">Analiz verileri yükleniyor...</div>
+                    <div id="modalError" class="error" style="display: none;"></div>
+                    <div id="modalAnalysisContent"></div>
+                    <div class="disclaimer"><strong>Uyarı:</strong> Bu analizler yalnızca bilgilendirme amaçlıdır...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
