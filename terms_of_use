@@ -1,1 +1,148 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VexGPT Terms of Use</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 900px;
+    margin: 40px 20px;
+    background: #fff;
+    padding: 35px 45px;
+    border-radius: 10px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+  }
+  .container:hover {
+    transform: translateY(-5px);
+  }
+  h1, h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+  }
+  h1:hover, h2:hover {
+    color: #2980b9;
+  }
+  p, ul {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  ul {
+    padding-left: 25px;
+  }
+  a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+  .last-updated {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 35px;
+  }
+  @media (max-width: 700px) {
+    .container {
+      margin: 20px 10px;
+      padding: 25px 20px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    p, ul {
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Terms of Use">
+    <h1>VexGPT Terms of Use</h1>
+    <p class="last-updated">Last Updated: July 11, 2025</p>
+
+    <h2>1. Purpose and Scope</h2>
+    <p>VexGPT  provides information, analysis, and statistical content related to football and other sports exclusively for informational and entertainment purposes.</p>
+    <p>The application does <strong>not</strong> offer or facilitate any betting, gambling, real-money gaming, financial transactions, prize awarding, lotteries, live betting, casino services, coupon generation, money transfers, deposits, or withdrawals.</p>
+    <p>Use of the application is subject to these Terms of Use (“Terms”) which constitute a legally binding agreement between you (“user”) and VexGPT.</p>
+
+    <h2>2. User Eligibility</h2>
+    <p>The Application is intended for individuals who are at least 13 years old or the minimum legal age in their jurisdiction, whichever is higher.</p>
+    <p>By accessing or using the App, you confirm that you meet the age requirement and agree to comply with these Terms.</p>
+    <p>Users under the required age are prohibited from using the App and should not access any content or features.</p>
+
+    <h2>3. User Responsibilities and Conduct</h2>
+    <p>You agree to use the App solely for lawful, informational, and personal use consistent with these Terms.</p>
+    <p>You shall not use the App to engage in or promote any illegal activities, including but not limited to unauthorized gambling, fraud, or data harvesting.</p>
+    <p>Any misuse of the App, violation of applicable laws, or breach of these Terms may result in immediate termination of access.</p>
+
+    <h2>4. Intellectual Property Rights</h2>
+    <p>All intellectual property rights related to the App including content, trademarks, designs, logos, and software are owned by or licensed to VexGPT.</p>
+    <p>You may not copy, reproduce, distribute, modify, create derivative works, publicly display, or otherwise exploit any part of the App without prior written consent.</p>
+
+    <h2>5. Third-Party Content and Advertisements</h2>
+    <p>The App may contain advertisements served by third-party providers such as Google AdMob.</p>
+    <p>These third parties may collect information automatically (e.g., device identifiers, IP addresses, usage data) as detailed in their privacy policies.</p>
+    <p>VexGPT is not responsible for the content, accuracy, or privacy practices of third-party advertisements or links.</p>
+
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>The App and all content are provided “as is” and “as available” without warranties of any kind, either express or implied.</p>
+    <p>VexGPT does not guarantee accuracy, completeness, reliability, or availability of any information or analysis provided.</p>
+    <p>You acknowledge and agree that your use of the App is at your sole risk.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, VexGPT and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the App.</p>
+    <p>This includes but is not limited to damages for loss of profits, data, goodwill, or other intangible losses.</p>
+
+    <h2>8. Changes to the Terms and Service</h2>
+    <p>VexGPT reserves the right to modify, update, or discontinue any aspect of the App or these Terms at any time without prior notice.</p>
+    <p>Continued use of the App after changes constitutes acceptance of the revised Terms.</p>
+
+    <h2>9. Termination</h2>
+    <p>We may suspend or terminate your access to the App immediately and without notice if you violate these Terms or for any reason deemed appropriate by us.</p>
+
+    <h2>10. Applicable Law and Jurisdiction</h2>
+    <p>These Terms and your use of the App are governed by and construed in accordance with applicable international laws, as well as the laws of the country where the user resides.</p>
+    <p>Additionally, use of the App is subject to the policies and terms of service of the Google Play Store and Apple App Store.</p>
+    <p>You agree to comply with all relevant local laws and regulations and acknowledge that certain features or services may be restricted in some jurisdictions.</p>
+
+    <h2>11. Privacy</h2>
+    <p>Your privacy is important to us. Please review our <a href="https://vexgptt.github.io/vexgpt.github.io/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> which explains how we collect, use, and protect your information.</p>
+
+    <h2>12. Contact Information</h2>
+    <p>If you have any questions, concerns, or requests regarding these Terms, please contact us at: <a href="mailto:vexgpt@proton.me">vexgpt@proton.me</a></p>
+
+    <h2>13. Miscellaneous</h2>
+    <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+    <p>These Terms constitute the entire agreement between you and VexGPT regarding the use of the App and supersede any prior agreements.</p>
+
+    <h2>14. Multilingual Support</h2>
+    <p>These Terms of Use may be presented in multiple languages. In case of any discrepancies between versions, the English version shall prevail.</p>
+
+    <h2>15. Consent</h2>
+    <p>By using our App, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use. Your continued use of the App constitutes your consent to these terms.</p>
+  </div>
+</body>
+</html>
